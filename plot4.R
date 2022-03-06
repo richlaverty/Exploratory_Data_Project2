@@ -19,3 +19,8 @@ if(file.exists("./data/Source_Classification_Code.rds"))
 {
   SCC <- readRDS("./data/Source_Classification_Code.rds")
 }
+
+# get the relevant data
+combustion <- SCC[grep("[Cc]ombust", SCC$SCC.Level.One), ]
+coalCombustion <- combutions[grep("[Cc]oal", SCC$combustion$SCC.Level.Three), ]
+

@@ -27,6 +27,7 @@ SCCCodes <- unique(coalCombustion$SCC)
 
 # get the total emissions for each year
 
+library(dplyr)
 coalCombNEI <- filter(NEI, SCC %in% SCCCodes)
 totalEmissions <- tapply(coalCombNEI$Emissions, coalCombNEI$year, sum)
 
